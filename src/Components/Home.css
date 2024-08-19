@@ -1,0 +1,30 @@
+
+@media (min-width :1022px) and (max-width :1496px) {
+    .image{
+        height: 28rem;
+    }
+    .container{
+        padding-right:0 ;
+    }
+     .textbox{
+        width: 70rem;
+     }
+
+     .imgbox{
+        width:50rem;
+     }
+
+     .textbox h1{
+        font-size: 36px;
+
+     }
+
+    
+
+}
+
+@media (max-width :1022px){
+    .yellowbox{
+        width: 15rem;
+    }
+}
