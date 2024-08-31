@@ -8,7 +8,7 @@ const Portfolio = () => {
     { id: 2, name: 'API', imgname: 'cloneimg.png' },
     { id: 3, name: 'FIGMA', imgname: 'cloneimg.png' },
     { id: 4, name: 'REACT', imgname: 'cloneimg.png' },
-    { id: 5, name: 'CLONE', imgname: 'cloneimg.png' },
+    { id: 5, name: 'SPOTIFY CLONE', imgname: 'cloneimg.png' },
     { id: 6, name: 'CLONE', imgname: 'cloneimg.png' }
   ]
   return (
