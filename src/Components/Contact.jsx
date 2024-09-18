@@ -1,5 +1,5 @@
 import React, { useState, useRef  } from 'react'
-import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTelegram,FaLinkedin} from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTelegram,FaLinkedin, FaGithub, FaWhatsapp} from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
@@ -38,8 +38,11 @@ export const Contact = () => {
         <div className="flex space-x-4 mt-6 text-2xl">
           <a href=""><FaFacebook className="hover:text-yellowColor transition duration-300" /></a>
           <a href=""><FaInstagram className="hover:text-yellowColor transition duration-300" /></a>
+          <a href="https://wa.me/917025984377" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp className="hover:text-yellowColor transition duration-300" /></a>
           <a href=""><FaTelegram className="hover:text-yellowColor transition duration-300" /></a>
           <a href="https://www.linkedin.com/in/sreeharsh-k-4b2782285/"><FaLinkedin className="hover:text-yellowColor transition duration-300" /></a>
+          <a href="https://github.com/sreeharshk92"><FaGithub className="hover:text-yellowColor transition duration-300" /></a>
         </div>
       </div>
       
