@@ -1,11 +1,9 @@
 import React from 'react';
 import './About.css'
-import { FaDownload } from 'react-icons/fa'
+import { FaDownload } from 'react-icons/fa';
 import { FaGraduationCap } from "react-icons/fa";
 import { FaSchool } from "react-icons/fa";
 import { FaBriefcase } from 'react-icons/fa';
-
-
 
 const About = () => {
 
@@ -20,25 +18,24 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-[6rem] bg-customColor  text-white text-center">
-      <div className='px-[23rem] items-center'>
+    <section id="about" className="py-[6rem] bg-customColor  text-white">
+      <div className='lg:px-96 md:px-96 px-10 flex flex-col justify-center'>
 
-
-        <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-6xl font-bold mb-[6.4rem]">ABOUT <span className='text-yellowColor'>ME</span></h2>
-        <h3 className="text-2xl font-bold text-start mb-6">PERSONEL INFOS</h3>
-        <div className="w-[55rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[16rem] text-left">
-          <div className='font-semibold'>
+        <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-6xl text-center font-bold mb-[6.4rem] bg-yellow-200">ABOUT <span className='text-yellowColor'>ME</span></h2>
+        <h3 className="text-2xl font-bold mb-6 text-start">PERSONEL INFOS</h3>
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[16rem] text-start">
+          <div className='font-semibold w-72'>
             <p className="mb-4"><span className=" text-slate-400">Full Name : </span>Sreeharsh K</p>
             <p className="mb-4"><span className=" text-slate-400">Age : </span>21</p>
             <p className="mb-4"><span className=" text-slate-400">Nationality : </span>India</p>
             <p className="mb-4"><span className=" text-slate-400">Languages : </span>English | Malayalam</p>
           </div>
-          <div className='font-semibold'>
+
+          <div className='font-semibold w-72'>
             <p className="mb-4"><span className=" text-slate-400">State : </span>Kerala</p>
             <p className="mb-4"><span className=" text-slate-400">Phone : </span>+ 91 7025984377</p>
             <p className="mb-4"><span className=" text-slate-400">Email : </span>sreeharshk92@gmail.com</p>
             <p className="mb-4"><span className=" text-slate-400">Freelance : </span>Available</p>
-
           </div>
 
         </div>
@@ -49,7 +46,7 @@ const About = () => {
 
 
       <hr className="mx-[31.5rem] border-slate-700 mb-14" />
-      <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="text-3xl font-bold mb-16">MY SKILLS</h3>
+      <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="text-3xl text-center font-bold mb-16">MY SKILLS</h3>
 
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 s">
 
@@ -74,9 +71,9 @@ const About = () => {
 
       <section className='py-10'>
         <hr className="mx-[31.5rem] border-slate-700 mb-14" />
-        <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="text-3xl font-bold mb-16">EDUCATION & EXPERIENCE</h3>
+        <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="text-3xl font-bold text-center mb-16">EDUCATION & EXPERIENCE</h3>
 
-        <main className='education-container'>
+        <main className='education-container grid grid-cols-2 md:grid-cols-1 md:gap-3 md:px-10 lg:grid-cols-2'>
 
 
           <section className='flex flex-col gap-8'>
