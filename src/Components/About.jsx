@@ -21,7 +21,7 @@ const About = () => {
     <section id="about" className="py-[6rem] bg-customColor  text-white">
       <div className='lg:px-96 md:px-96 px-10 flex flex-col justify-center'>
 
-        <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-6xl text-center font-bold mb-[6.4rem] bg-yellow-200">ABOUT <span className='text-yellowColor'>ME</span></h2>
+        <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-6xl text-center font-bold mb-[6.4rem]">ABOUT <span className='text-yellowColor'>ME</span></h2>
         <h3 className="text-2xl font-bold mb-6 text-start">PERSONEL INFOS</h3>
         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[16rem] text-start">
           <div className='font-semibold w-72'>
@@ -91,7 +91,7 @@ const About = () => {
 
 
                 <div className='bg-[#212121]  w-[7rem] py-1 justify-center items-center  rounded-xl'>
-                  <p className='font-medium text-sm'>2021 - 2023</p>
+                  <p className='year'>2021 - 2023</p>
                 </div>
 
                 <h1 className='text-start text-lg '>BACHELOR DEGREE <span>- KANNUR UNIVERSITY</span></h1>
@@ -113,7 +113,7 @@ const About = () => {
 
 
                 <div className='bg-[#212121] w-[7rem] py-1 justify-center items-center  rounded-xl'>
-                  <p className='font-medium text-sm'>2019 - 2020</p>
+                  <p className='year '>2019 - 2020</p>
                 </div>
 
                 <h1 className='text-start text-lg'>HIGHER SECONDARY <span>- GOVT HSS MEENKUNNU</span></h1>
@@ -133,7 +133,7 @@ const About = () => {
 
 
                 <div className='bg-[#212121]  w-[7rem] py-1 justify-center items-center  rounded-xl'>
-                  <p className='font-medium text-sm'>2018</p>
+                  <p className='year'>2018</p>
                 </div>
 
                 <h1 className='text-start text-lg'>SSLC <span>- AHSS AZHIKODE</span></h1>
@@ -157,7 +157,7 @@ const About = () => {
 
 
                 <div className='bg-[#212121]  w-[8rem] py-1 justify-center items-center  rounded-xl'>
-                  <p className='font-medium text-sm'>2024 - PRESENT</p>
+                  <p className='year'>2024 - PRESENT</p>
                 </div>
 
                 <h1 className='text-start text-lg'>INTERN <span>- EDUZELL TECHNOLOGIES & SOLUTIONS L L P</span></h1>

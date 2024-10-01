@@ -5,6 +5,12 @@
     color: #CFCFCF;
 }
 
+.year{
+    text-align: center;
+    font-weight: 500;
+    font-size: small;
+}
+
 .education-container h1{
     font-weight:500;
 }
