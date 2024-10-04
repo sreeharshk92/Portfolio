@@ -34,11 +34,10 @@ const Portfolio = () => {
                 <img className="w-full object-cover rounded-t-md hover:transition duration-700 ease-in-out hover:scale-110" src={`/${item.imgname}`} alt="Portfolio item"/>
                 <h3 className="text-lg sm:text-xl text-center py-4 font-semibold">{item.name}</h3>
                 <div className='flex flex-col gap-3 justify-between mt-4  '>
-                  <a href='' className='w-full md:w-auto border rounded-md flex gap-2  items-center justify-center border-yellowColor px-4 py-2 hover:bg-yellowColor hover:transition duration-500 ease-linear' >
+                  <a href="#" className='w-full md:w-auto border rounded-md flex gap-2  items-center justify-center border-yellowColor px-4 py-2 hover:bg-yellowColor hover:transition duration-500 ease-linear' >
                     <FaGithub  />GitHub
                   </a>
-                  <a
-                    href=''
+                  <a href="#"
                     className='w-full md:w-auto border rounded-md flex gap-2 items-center justify-center border-yellowColor px-4 py-2 hover:bg-yellowColor hover:transition duration-500 ease-linear'
                   >
                     <FaExternalLinkAlt />DEMO

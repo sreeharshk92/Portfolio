@@ -4,7 +4,7 @@ import './Home.css'
 const Home = () => {
   return (
     <section className="min-h-screen bg-customColor flex items-center">
-      {/* Yellow box */}
+     
       <div className="yellowbox absolute left-0 top-0 w-1/2 h-full lg:bg-yellowColor  md:bg-yellowColor z-0" style={{ clipPath: 'polygon(0 0, 23% 0, 55% 100%, 0% 100%)' }}></div>
 
       <div className=" container mx-auto flex flex-col lg:flex-row justify-between items-center p-6 lg:p-12 z-10">
