@@ -36,10 +36,10 @@ export const Contact = () => {
             <p className="mb-4 flex items-center"><FaEnvelope className="mr-2" /> sreeharshk92@gmail.com</p>
             <p className="mb-4 flex items-center"><FaPhone className="mr-2" /> +91 7025984377</p>
             <div className="flex space-x-4 mt-6 text-xl">
-              <a href="#"><FaFacebook className="hover:text-yellowColor transition duration-300" /></a>
-              <a href="#"><FaInstagram className="hover:text-yellowColor transition duration-300" /></a>
-              <a href="https://wa.me/917025984377" target="_blank" rel="noopener noreferrer"><FaWhatsapp className="hover:text-yellowColor transition duration-300" /></a>
-              <a href="#"><FaTelegram className="hover:text-yellowColor transition duration-300" /></a>
+              <a href="https://www.facebook.com/sreeharsh.sreeharsh.923/"><FaFacebook className="hover:text-yellowColor transition duration-300" /></a>
+              <a href="https://www.instagram.com/___sreeharsh___"><FaInstagram className="hover:text-yellowColor transition duration-300" /></a>
+              <a href="https://wa.me/+917025984377" target="_blank" rel="noopener noreferrer"><FaWhatsapp className="hover:text-yellowColor transition duration-300" /></a>
+              <a href="https://t.me/+917025984377"><FaTelegram className="hover:text-yellowColor transition duration-300" /></a>
               <a href="https://www.linkedin.com/in/sreeharsh-k-4b2782285/"><FaLinkedin className="hover:text-yellowColor transition duration-300" /></a>
               <a href="https://github.com/sreeharshk92"><FaGithub className="hover:text-yellowColor transition duration-300" /></a>
             </div>
