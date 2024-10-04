@@ -12,18 +12,18 @@ const Services = () => {
   ];
 
   return (
-    <section className='bg-customColor min-h-screen text-white px-[13rem]'>
+    <section className='bg-customColor min-h-screen text-white px-4 sm:px-8 md:px-[8rem] lg:px-[13rem]'>
       <div className='py-[6rem] text-center'>
-        <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-6xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}>
           <span className='text-yellowColor'>MY</span> SERVICES
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
         {services.map(service => (
-          <div key={service.id} className="flex flex-col border items-center border-md rounded-lg p-6 text-center" style={{ boxShadow: '0 0 .5rem yellowColor', outline: '2px solid yellowColor' }}>
-            <div className="text-5xl text-center text-yellowColor mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold">{service.name}</h3>
-            <p className="mt-2">{service.description}</p>
+          <div key={service.id} className="flex flex-col border items-center border-md rounded-lg p-6 text-center bg-gray-800" style={{ boxShadow: '0 0 .5rem yellowColor', outline: '2px solid yellowColor' }}>
+            <div className="text-5xl text-yellowColor mb-4">{service.icon}</div>
+            <h3 className="text-lg sm:text-xl font-semibold">{service.name}</h3>
+            <p className="mt-2 text-sm sm:text-base">{service.description}</p>
           </div>
         ))}
       </div>

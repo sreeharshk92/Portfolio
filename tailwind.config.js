@@ -9,6 +9,9 @@ module.exports = {
         inputColor:'#252525',
         inputTextColor:'#757575'
       },
+      screens:{
+        sml:'440px',
+      },
     },
   },
   plugins: [],

@@ -19,61 +19,53 @@ const About = () => {
 
   return (
     <section id="about" className="py-[6rem] bg-customColor  text-white">
-      <div className='lg:px-96 md:px-96 px-10 flex flex-col justify-center'>
-
-        <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-6xl text-center font-bold mb-[6.4rem]">ABOUT <span className='text-yellowColor'>ME</span></h2>
-        <h3 className="text-2xl font-bold mb-6 text-start">PERSONEL INFOS</h3>
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[16rem] text-start">
-          <div className='font-semibold w-72'>
+       <div className='lg:px-96 md:px-32 px-10 flex flex-col justify-center'>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-24" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}>
+          ABOUT <span className='text-yellowColor'>ME</span>
+        </h2>
+        <h3 className="text-2xl font-bold mb-6 text-start">PERSONAL INFOS</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-start">
+          <div className='font-semibold'>
             <p className="mb-4"><span className=" text-slate-400">Full Name : </span>Sreeharsh K</p>
             <p className="mb-4"><span className=" text-slate-400">Age : </span>21</p>
             <p className="mb-4"><span className=" text-slate-400">Nationality : </span>India</p>
             <p className="mb-4"><span className=" text-slate-400">Languages : </span>English | Malayalam</p>
           </div>
-
-          <div className='font-semibold w-72'>
+          <div className='font-semibold'>
             <p className="mb-4"><span className=" text-slate-400">State : </span>Kerala</p>
-            <p className="mb-4"><span className=" text-slate-400">Phone : </span>+ 91 7025984377</p>
+            <p className="mb-4"><span className=" text-slate-400">Phone : </span>+91 7025984377</p>
             <p className="mb-4"><span className=" text-slate-400">Email : </span>sreeharshk92@gmail.com</p>
             <p className="mb-4"><span className=" text-slate-400">Freelance : </span>Available</p>
           </div>
-
         </div>
-        <button style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '500' }}
-          className='flex items-center justify-center border border-yellowColor rounded-3xl py-3 w-[13rem] mt-8 mb-[3.9rem] hover:bg-yellowColor hover:transition duration-500 ease-linear'>
-          DOWNLOAD CV <FaDownload className='ml-5' /></button>
+        <button className='flex items-center justify-center border border-yellowColor rounded-3xl py-3 w-[15rem] md:w-[13rem]  mt-8 mb-10 hover:bg-yellowColor hover:transition duration-500 ease-linear'>
+          DOWNLOAD CV <FaDownload className='ml-5' />
+        </button>
       </div>
 
+      <hr className="mx-auto md:w-[50%] lg:w-[30rem]  w-[18rem] border-slate-700 mb-14" />
+      <h3 className="lg:text-3xl md:text-2xl text-xl  px-10 text-center  font-bold mb-16" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }}>MY SKILLS</h3>
 
-      <hr className="mx-[31.5rem] border-slate-700 mb-14" />
-      <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="text-3xl text-center font-bold mb-16">MY SKILLS</h3>
-
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 s">
-
-        {
-          skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col items-center ">
-              <div className="mb-4">
-
-                <section className='flex justify-between px-2'>
-                  <p>{skill.name}</p>
-                  <p>{skill.percentage}%</p>
-                </section>
-
-
-                <div className=" w-[10rem] rounded-full border-2 border-yellowColor flex">
-                  <div className='w-[5rem] bg-yellowColor h-6 rounded-full '></div>
-                </div>
+      <div className="container mx-auto grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8 px-10">
+        {skills.map((skill) => (
+          <div key={skill.name} className="flex flex-col items-center ">
+            <div className="mb-4">
+              <section className='flex justify-between px-2'>
+                <p>{skill.name}</p>
+                <p>{skill.percentage}%</p>
+              </section>
+              <div className="w-[10rem] rounded-full border-2 border-yellowColor flex">
+                <div className='h-6 rounded-full bg-yellowColor' style={{ width: `${skill.percentage}%` }}></div>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
-
       <section className='py-10'>
-        <hr className="mx-[31.5rem] border-slate-700 mb-14" />
-        <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="text-3xl font-bold text-center mb-16">EDUCATION & EXPERIENCE</h3>
+      <hr className="mx-auto md:w-[50%] lg:w-[30rem] w-[18rem] border-slate-700 mb-14" />
+        <h3 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }} className="lg:text-3xl md:text-2xl text-xl font-bold text-center mb-16">EDUCATION & EXPERIENCE</h3>
 
-        <main className='education-container grid grid-cols-2 md:grid-cols-1 md:gap-3 md:px-10 lg:grid-cols-2'>
+        <main className='education-container grid lg:grid-cols-2 md:grid-cols-1 md:px-10 lg:px-36 px-10 mx-auto lg:gap-0 md:gap-0 gap-14  grid-cols-1'>
 
 
           <section className='flex flex-col gap-8'>

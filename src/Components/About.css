@@ -15,11 +15,7 @@
     font-weight:500;
 }
 
-.education-container{
-    display: flex;
-    justify-content: center;
-    gap: 12rem;
-}
+
 
 .yellowCircle{
     display: flex;
