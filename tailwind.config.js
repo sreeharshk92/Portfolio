@@ -12,6 +12,8 @@ module.exports = {
       screens:{
         sml:'440px',
       },
+
+      
     },
   },
   plugins: [],
