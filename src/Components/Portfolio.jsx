@@ -33,47 +33,37 @@ const Portfolio = () => {
       <section className="body">
         <main className="wrapper grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-0 md:gap-x-5 lg:gap-x-5">
 
-
-
           {/* Purely Pro Care Card */}
-          
-
-
           <div className={`item ${animatedItems[0] ? 'animatedItems  lg:!w-[47%] md:!w-[80%] !w-[97%]' : ''}`} onClick={() => animateCard(0)}>
-  <span className="close" onClick={(e) => closeCard(0, e)}></span>
-  <div className="graphic">
-    <img src={website} alt="Purely Pro Care" />
-    <span>Purely Pro Care</span>
-  </div>
-  <div className="brief">
-    <div className="typo">
-      <span>Purely Pro Care</span>
-      <span>Full Stack Development</span>
-    </div>
-  </div>
-  <div className="sub">
-    <p className="header text-2xl md:text-3xl lg:text-5xl pb-4">Purely Pro Care</p>
-    <p className="story">
-      This project showcases a fully responsive home service booking platform,
-      Purely Pro Care, developed using React, Laravel, and MySQL. It features
-      a user-friendly layout with seamless navigation, service listings, and an
-      interactive booking system. The design mimics professional service platforms,
-      providing users with an intuitive experience for browsing and booking various home services.
-    </p>
-    <div className='text-black flex gap-3 py-2 text-xl'>
-      <a href="https://github.com/sreeharshk92/Purely-Pro-Care-Frontend"><FaGithub /></a>
-      <a href="https://astounding-youtiao-820a1a.netlify.app"><FaRegPlayCircle /></a>
-    </div>
-  </div>
-</div>
-
-        
-          
-
+            <span className="close" onClick={(e) => closeCard(0, e)}></span>
+            <div className="graphic">
+              <img src={website} alt="Purely Pro Care" className='' />
+              <span>Purely Pro Care</span>
+            </div>
+            <div className="brief">
+              <div className="typo">
+                <span>Purely Pro Care</span>
+                <span>Full Stack Development</span>
+              </div>
+            </div>
+            <div className="sub">
+              <p className="header text-2xl md:text-3xl lg:text-5xl pb-4">Purely Pro Care</p>
+              <p className="story">
+                This project showcases a fully responsive home service booking platform,
+                Purely Pro Care, developed using React, Laravel, and MySQL. It features
+                a user-friendly layout with seamless navigation, service listings, and an
+                interactive booking system. The design mimics professional service platforms,
+                providing users with an intuitive experience for browsing and booking various home services.
+              </p>
+              <div className='text-black flex gap-3 py-2 text-xl'>
+                <a href="https://github.com/sreeharshk92/Purely-Pro-Care-Frontend"><FaGithub /></a>
+                <a href="https://astounding-youtiao-820a1a.netlify.app"><FaRegPlayCircle /></a>
+              </div>
+            </div>
+          </div>
 
           {/* Starbucks Clone Card */}
-          
-          <div className= {`item ${animatedItems[1] ? 'animatedItems  lg:!w-[50%] md:!w-[80%] !w-[97%]' : ''}`}onClick={() => animateCard(1)}>
+          <div className={`item ${animatedItems[1] ? 'animatedItems  lg:!w-[50%] md:!w-[80%] !w-[97%]' : ''}`} onClick={() => animateCard(1)}>
             <span className="close" onClick={(e) => closeCard(1, e)}></span>
             <div className="graphic">
               <img src={starbucksClone} alt="Starbucks Clone" />
@@ -88,7 +78,7 @@ const Portfolio = () => {
             <div className="sub">
               <p className="header text-2xl md:text-3xl lg:text-4xl pb-4">Starbucks Clone</p>
               <p className="story">
-              This project showcases a fully responsive clone of the Starbucks website,
+                This project showcases a fully responsive clone of the Starbucks website,
                 developed using HTML and CSS. It features a user-friendly layout with
                 navigation, product displays, and an interactive design that mimics the
                 original site's aesthetic, allowing users to experience a familiar
@@ -99,7 +89,6 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-
 
           {/* TMDB */}
           <div className={`item ${animatedItems[2] ? 'animatedItems  lg:!w-[50%] md:!w-[80%] !w-[97%]' : ''}`} onClick={() => animateCard(2)}>
@@ -125,9 +114,8 @@ const Portfolio = () => {
             </div>
           </div>
 
-
-           {/* Spotify clone */}
-           <div className={`item ${animatedItems[3] ? 'animatedItems  lg:!w-[50%] md:!w-[80%] !w-[97%]' : ''}`} onClick={() => animateCard(3)}>
+          {/* Spotify clone */}
+          <div className={`item ${animatedItems[3] ? 'animatedItems  lg:!w-[50%] md:!w-[80%] !w-[97%]' : ''}`} onClick={() => animateCard(3)}>
             <span className="close" onClick={(e) => closeCard(3, e)}></span>
             <div className="graphic">
               <img src={spotifyClone} alt="Purely Pro Care" />
