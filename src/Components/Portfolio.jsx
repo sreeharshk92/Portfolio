@@ -37,17 +37,17 @@ const Portfolio = () => {
           <div className={`item ${animatedItems[0] ? 'animatedItems  lg:!w-[47%] md:!w-[80%] !w-[97%]' : ''}`} onClick={() => animateCard(0)}>
             <span className="close" onClick={(e) => closeCard(0, e)}></span>
             <div className="graphic">
-              <img src={website} alt="Purely Pro Care" className='' />
+              <img src={website} alt="Purely Pro Care" />
               <span>Purely Pro Care</span>
             </div>
             <div className="brief">
               <div className="typo">
-                <span>Purely Pro Care</span>
-                <span>Full Stack Development</span>
+                <span>Full Stack Website</span>
+                <span>React | Laravel | MySQL</span>
               </div>
             </div>
             <div className="sub">
-              <p className="header text-2xl md:text-3xl lg:text-5xl pb-4">Purely Pro Care</p>
+              <p className="header text-2xl md:text-3xl lg:text-4xl pb-4">Purely Pro Care</p>
               <p className="story">
                 This project showcases a fully responsive home service booking platform,
                 Purely Pro Care, developed using React, Laravel, and MySQL. It features
@@ -71,8 +71,8 @@ const Portfolio = () => {
             </div>
             <div className="brief">
               <div className="typo">
-                <span>Starbucks Clone</span>
-                <span>Web Development</span>
+                <span>Static Website</span>
+                <span>HTML | CSS</span>
               </div>
             </div>
             <div className="sub">
@@ -95,12 +95,12 @@ const Portfolio = () => {
             <span className="close" onClick={(e) => closeCard(2, e)}></span>
             <div className="graphic">
               <img src={tmdb} alt="Purely Pro Care" />
-              <span>TMDB Api</span>
+              <span>Search for movies</span>
             </div>
             <div className="brief">
               <div className="typo">
-                <span>The Movie Database Api</span>
-                <span>Web Api Integration</span>
+                <span>Web Api</span>
+                <span>HTML | CSS | JavaScript</span>
               </div>
             </div>
             <div className="sub">
@@ -109,7 +109,7 @@ const Portfolio = () => {
                 This project leverages the TMDB API to create an interactive movie exploration tool using HTML, CSS, and JavaScript. Users can browse a vast library of movies with a responsive design that adapts seamlessly to different screen sizes. The application features advanced filtering options, allowing users to sort movies by genre, release date, and rating, enhancing the overall user experience and making it easy to find the perfect film.              </p>
               <div className='text-black flex gap-3 py-2 text-xl'>
                 <a href="https://github.com/sreeharshk92/The-movie-database-api"><FaGithub /></a>
-                <a href="https://astounding-youtiao-820a1a.netlify.app"><FaRegPlayCircle /></a>
+                <a href="https://searchformovies-api.netlify.app"><FaRegPlayCircle /></a>
               </div>
             </div>
           </div>
@@ -123,8 +123,8 @@ const Portfolio = () => {
             </div>
             <div className="brief">
               <div className="typo">
-                <span>Spotify Clone</span>
-                <span>Web Development</span>
+                <span>Dynamic Website</span>
+                <span>React</span>
               </div>
             </div>
             <div className="sub">
@@ -132,7 +132,7 @@ const Portfolio = () => {
               <p className="story">The project developed using React. It is a multiple webpage web application that mimics the core functionalities and design of the original Spotify interface. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details. The clone leverages React's component-based architecture for fast rendering, enabling interactive elements like play buttons, search functionality, and audio controls.</p>
               <div className='text-black flex gap-3 py-2 text-xl'>
                 <a href="https://github.com/sreeharshk92/Spotify-clone"><FaGithub /></a>
-                <a href="https://astounding-youtiao-820a1a.netlify.app"><FaRegPlayCircle /></a>
+                <a href="https://spotifycloneorg.netlify.app"><FaRegPlayCircle /></a>
               </div>
             </div>
           </div>
