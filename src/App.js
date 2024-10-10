@@ -22,11 +22,11 @@ function App() {
    <Sidebar></Sidebar>
       <Router>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/About" element={<About/>}></Route>
-        <Route path="/Portfolio" element={<Portfolio/>}></Route>
-        <Route path="/Services" element={<Services/>}></Route>
-        <Route path="/Contact" element={<Contact/>}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/About" element={<About />}></Route>
+        <Route path="/Portfolio" element={<Portfolio />}></Route>
+        <Route path="/Services" element={<Services />}></Route>
+        <Route path="/Contact" element={<Contact />}></Route>
       </Routes>
     </Router>
 
