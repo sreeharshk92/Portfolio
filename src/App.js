@@ -19,14 +19,15 @@ function App() {
   return (
     <>
    
-   <Sidebar></Sidebar>
       <Router>
+      <Sidebar />
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/About" element={<About />}></Route>
-        <Route path="/Portfolio" element={<Portfolio />}></Route>
-        <Route path="/Services" element={<Services />}></Route>
-        <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/portfolio" element={<Portfolio />}></Route>
+        <Route path="/services" element={<Services />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </Router>
 
