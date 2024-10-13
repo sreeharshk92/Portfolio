@@ -29,7 +29,7 @@ export const Contact = () => {
         <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
           CONTACT <span className='text-yellowColor'>ME</span>
         </h2>
-        <div className="w-full lg:w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-2  text-left lg:mt-24">
+        <div className="w-full lg:w-3/4  mx-auto grid grid-cols-1 lg:grid-cols-2  text-left lg:mt-24">
           <div className='font-semibold lg:w-2/3'>
             <h3 className="text-xl lg:text-2xl font-bold mb-6">GET IN TOUCH</h3>
             <p className="mb-6">Feel free to reach out via email or phone. I'm available for freelance projects and collaborations.</p>
