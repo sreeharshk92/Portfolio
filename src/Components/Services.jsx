@@ -1,9 +1,10 @@
 import React from 'react';
+import './Services.css'
 import { FaLaptopCode, FaCode, FaServer, FaDatabase, FaCloud, FaMobileAlt } from 'react-icons/fa';
 
 const Services = () => {
   const services = [
-    { id: 1, name: 'Full-Stack Web Development', description: 'Development of robust and scalable web applications using Laravel for the backend and React.js for the frontend.', icon: <FaLaptopCode /> },
+    { id: 1, name: 'Full Stack Development', description: 'Development of robust and scalable web applications using Laravel for the backend and React.js for the frontend.', icon: <FaLaptopCode /> },
     { id: 2, name: 'Frontend Development', description: 'Creating responsive and interactive user interfaces with HTML, CSS, JavaScript, and React.js.', icon: <FaCode /> },
     { id: 3, name: 'Backend Development', description: 'Building and managing server-side logic and databases using Laravel and MySQL.', icon: <FaServer /> },
     { id: 4, name: 'Database Management', description: 'Designing, managing, and optimizing databases for performance and scalability with MySQL.', icon: <FaDatabase /> },
@@ -18,17 +19,47 @@ const Services = () => {
           <span className='text-yellowColor'>MY</span> SERVICES
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
-        {services.map(service => (
-          <div key={service.id} className="flex flex-col border items-center border-md rounded-lg p-6 text-center bg-gray-800" style={{ boxShadow: '0 0 .5rem yellowColor', outline: '2px solid yellowColor' }}>
-            <div className="text-5xl text-yellowColor mb-4">{service.icon}</div>
-            <h3 className="text-lg sm:text-xl font-semibold">{service.name}</h3>
-            <p className="mt-2 text-sm sm:text-base">{service.description}</p>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 py-12">
+{services.map((service) => (
+
+
+
+
+      <article className="card">
+      <div className="thumb"></div>
+      <div className="infos bg-gradient-to-b from-yellowColor to-white">
+       
+        <h2 className="title">{service.name}</h2>
+        <div className='innerbox flex justify-center items-center gap-5'>
+          
+        
+        <h1 className='icon'>{service.icon}</h1>
+        <p className="txt">{service.description}</p>
+        </div>
+      </div>
+    </article>
+
+))}
+
+
+
+       
       </div>
     </section>
   );
 };
 
 export default Services;
+/*
+ {services.map(service => (
+          <div key={service.id} className="flex flex-col border items-center border-md border-[#323030] rounded-3xl rounded-tr-none rounded-bl-none   text-center " style={{ boxShadow: '0 0 .5rem yellowColor', outline: '2px solid yellowColor' }}>
+            <div className="text-5xl text- mb-4">{service.icon}</div>
+            <h3 className="text-lg sm:text-xl font-semibold">{service.name}</h3>
+            <p className="mt-2 text-sm sm:text-base">{service.description}</p>
+            <div className='bg-yellowColor h-auto w-full'>
+              <h1 className='p-3'>{service.name}</h1>
+            </div>
+          </div>
+        ))}
+
+*/

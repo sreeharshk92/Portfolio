@@ -1,27 +1,25 @@
 .nav-item{
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   width: 2.8rem;
   overflow: hidden;
   color: white;
 }
 
 .nav-item:hover{
-  width: 8.1rem;
   background-color: #ffb400;
   color: white;
 
 }
 
 .nav-text {
-  transition: all 1s ease;
+  transition: opacity 0.5s ease;
   display: none;
-  font-weight: 500;
+  font-weight: 900;
   font-size: small;
  }
 
 .nav-item:hover .nav-text {
   display: inline-block;
-  text-align: center;
   
   
 }

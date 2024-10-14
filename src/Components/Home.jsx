@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import mypic from './mypic.jpg';
+import myimg2 from './images/myimg2.jpg'
 import './Home.css';
 
 const Home = () => {
@@ -40,12 +41,9 @@ const Home = () => {
       ></div>
 
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center p-6 lg:p-12 z-10">
-        <div className="imgbox w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
-          <img
-            src={mypic}
-            alt="Sreeharsh K"
-            className="image rounded-[2.5rem] border-2 border-black h-[20rem] lg:h-[43rem] z-20"
-          />
+        <div className="imgbox w-full  lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+          <img src={mypic} alt="Sreeharsh K" className="image rounded-[2.5rem] border-2  border-black h-[20rem]  lg:h-[43rem] z-20" />
+          {/* <img src={myimg2} alt="Sreeharsh K" className="rounded-full h-[18rem]" /> */}
         </div>
         <div className="textbox text-white w-full lg:w-1/2 md:w-[33rem] lg:mr-[9rem] z-10 text-center lg:text-left">
           <h1 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '800' }}className="text-3xl lg:text-5xl font-bold mb-4 text-yellowColor">I'M SREEHARSH K.</h1>

@@ -51,7 +51,7 @@ export const Contact = () => {
               <input type="email" name="user_email" className="w-full px-6 py-3 border-inputColor rounded-full focus:outline-none focus:border-yellowColor bg-inputColor placeholder-inputTextColor" placeholder="YOUR EMAIL" />
             </div>
             <div>
-              <textarea name="message" className="w-full px-6 py-3 border-inputColor rounded-3xl focus:outline-none focus:border-yellowColor bg-inputColor placeholder-inputTextColor" rows="7" placeholder="YOUR MESSAGE"></textarea>
+              <textarea name="message" className="w-full px-6 py-3  rounded-3xl focus:outline-none focus:outline-yellowColor bg-inputColor placeholder-inputTextColor" rows="8" placeholder="YOUR MESSAGE"></textarea>
               {sendMessage && <p className='text-yellow-300 font-thin'>{sendMessage}</p>}
             </div>
             <button type='submit' className='border border-yellowColor rounded-3xl py-3 px-14 mt-4 hover:bg-yellowColor hover:transition duration-500 ease-linear'>
