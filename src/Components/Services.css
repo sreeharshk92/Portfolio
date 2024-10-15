@@ -23,7 +23,6 @@
     height: 350px;
     position: relative;
     text-align: center;
-    background: #fff;
     transition: 0.4s cubic-bezier(.17,.67,.5,1.03) 0.15s;
   }
   
@@ -32,7 +31,8 @@
    top: 0;
    padding-top: 24px;
     letter-spacing: 3px;
-    color: #152536;
+    color: rgb(57, 50, 50);
+    font-weight: 900;
     font-size: 1rem;
     text-transform: uppercase;
   }
@@ -62,8 +62,7 @@
   article.card .infos .txt {
      /* font-family: 'Merriweather', sans-serif; */
     text-align: start; 
-    
-    color: rgba(21, 37, 54, 0.7);
+    color: black;
     opacity: 0;
     transition: 0.5s cubic-bezier(.17,.67,.5,1.03) 0.25s;
   }
