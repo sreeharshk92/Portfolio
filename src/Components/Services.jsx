@@ -41,25 +41,9 @@ const Services = () => {
 
 ))}
 
-
-
-       
       </div>
     </section>
   );
 };
 
 export default Services;
-/*
- {services.map(service => (
-          <div key={service.id} className="flex flex-col border items-center border-md border-[#323030] rounded-3xl rounded-tr-none rounded-bl-none   text-center " style={{ boxShadow: '0 0 .5rem yellowColor', outline: '2px solid yellowColor' }}>
-            <div className="text-5xl text- mb-4">{service.icon}</div>
-            <h3 className="text-lg sm:text-xl font-semibold">{service.name}</h3>
-            <p className="mt-2 text-sm sm:text-base">{service.description}</p>
-            <div className='bg-yellowColor h-auto w-full'>
-              <h1 className='p-3'>{service.name}</h1>
-            </div>
-          </div>
-        ))}
-
-*/
