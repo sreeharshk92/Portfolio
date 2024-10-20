@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import mypic from './mypic.jpg';
-import myimg2 from './images/myimg2.jpg'
 import './Home.css';
 
 const Home = () => {
@@ -31,7 +30,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(randomizeText, 4000); // Change every 4s to match animation
     return () => clearInterval(interval); // Clear interval on component unmount
-  }, []);
+  },);
 
   return (
     <section className="min-h-screen bg-customColor flex items-center">
