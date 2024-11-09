@@ -1,68 +1,43 @@
+/* Custom styles for the service blocks */
+.service-card {
+  background: white;
+  transition: transform .5s ease, box-shadow 0.3s ease;
+}
 
- 
-  article.card {
-    width: 350px;
-    height: 350px;
-    border-radius: 3px;
-    overflow: hidden;
-  }
+.service-card:hover {
+  transform: translateY(-10px);
   
-  article.card .thumb {
-    height: 17rem;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png') ;
-    background-size: cover;
-    border-radius: 3px;
-  }
-  
-  article.card .infos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: 350px;
-    position: relative;
-    text-align: center;
-    transition: 0.4s cubic-bezier(.17,.67,.5,1.03) 0.15s;
-  }
-  
-  article.card .infos .title {
-   position: absolute;
-   top: 0;
-   padding-top: 24px;
-    letter-spacing: 3px;
-    color: rgb(57, 50, 50);
-    font-weight: 900;
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-  .icon{
-    color: black;
-    display: none;
-    font-size: 5rem;
+.service-title {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 700;
+  text-align: left;
+}
 
+.service-description {
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+  line-height: 1.5;
+}
 
-  }
+.service-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
- 
-  
-  article.card .infos .txt {
-    text-align: start; 
-    color: black;
-    opacity: 0;
-    transition: 0.5s cubic-bezier(.17,.67,.5,1.03) 0.25s;
+@media (min-width: 340px) {
+  .service-card {
+    padding: 1.5rem;
   }
-  
-  
-  article.card:hover .infos {
-    transform: translateY(-260px);
+}
+
+@media (min-width: 1024px) {
+  .service-card {
+    padding: 2rem;
   }
-  
- 
-  article.card:hover .infos .txt,
-  article.card:hover .infos .icon {
-    display: inline-block;
-    opacity: 1;
-  }
-  
+}

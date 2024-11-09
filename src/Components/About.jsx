@@ -124,7 +124,7 @@ const About = () => {
               <section className='flex flex-col py-2 w-[25rem] gap-4'>
 
 
-                <div className='bg-[#212121]  w-[7rem] py-1 justify-center items-center  rounded-xl'>
+                <div className='bg-[#212121] w-[7rem] py-1 justify-center items-center  rounded-xl'>
                   <p className='year'>2018</p>
                 </div>
 

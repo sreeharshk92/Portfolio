@@ -1,7 +1,7 @@
 import React, { useState, useRef  } from 'react'
 import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTelegram,FaLinkedin, FaGithub, FaWhatsapp} from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
-
+import './Contact.css';
 export const Contact = () => {
   const [sendMessage,setSendMessage] = useState('');
   const form = useRef();
@@ -47,14 +47,14 @@ export const Contact = () => {
 
           <form onSubmit={sendEmail} ref={form} className="space-y-6 lg:mt-0 md:mt-5 mt-5">
             <div className='flex flex-col lg:flex-row gap-4'>
-              <input type="text" name="user_name" className="w-full px-6 py-3 border-inputColor rounded-full focus:outline-none focus:border-yellowColor bg-inputColor placeholder-inputTextColor" placeholder="YOUR NAME" />
-              <input type="email" name="user_email" className="w-full px-6 py-3 border-inputColor rounded-full focus:outline-none focus:border-yellowColor bg-inputColor placeholder-inputTextColor" placeholder="YOUR EMAIL" />
+              <input type="text" name="user_name" className="smallInput" placeholder="YOUR NAME" />
+              <input type="email" name="user_email" className="smallInput" placeholder="YOUR EMAIL" />
             </div>
             <div>
-              <textarea name="message" className="w-full px-6 py-3  rounded-3xl focus:outline-none focus:outline-yellowColor bg-inputColor placeholder-inputTextColor" rows="8" placeholder="YOUR MESSAGE"></textarea>
+              <textarea name="message" className="largeInput" rows="8" placeholder="YOUR MESSAGE"></textarea>
               {sendMessage && <p className='text-yellow-300 font-thin'>{sendMessage}</p>}
             </div>
-            <button type='submit' className='border border-yellowColor rounded-3xl py-3 px-14 mt-4 hover:bg-yellowColor hover:transition duration-500 ease-linear'>
+            <button type='submit' className='border border-[#ffb400] rounded-3xl py-3 px-14 mt-4 hover:bg-[#ffb400] hover:transition duration-500 ease-linear'>
               SEND
             </button>
           </form>

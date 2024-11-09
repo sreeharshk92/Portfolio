@@ -1,0 +1,35 @@
+.smallInput{
+    width: 100%;
+    padding: 12px 24px;
+    border-color: #252525;
+    border-radius: 9999px;
+    background: #252525;
+}
+
+.smallInput::placeholder{
+    color: #757575;
+}
+
+.smallInput:focus{
+    outline:none;
+    border-color:#ffb400;
+}
+
+
+.largeInput{
+    width: 100%;
+    padding: 12px 24px;
+    border-color: #252525;
+    border-radius: 24px;
+    background: #252525;
+}
+
+.largeInput::placeholder{
+    color: #757575;
+}
+
+.largeInput:focus{
+    outline:none;
+    border-color: #ffb400;
+    outline-color:#ffb400;
+}

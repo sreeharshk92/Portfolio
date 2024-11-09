@@ -1,5 +1,5 @@
 import React from 'react';
-import './Services.css'
+import './Services.css';
 import { FaLaptopCode, FaCode, FaServer, FaDatabase, FaCloud, FaMobileAlt } from 'react-icons/fa';
 
 const Services = () => {
@@ -19,28 +19,14 @@ const Services = () => {
           <span className='text-yellowColor'>MY</span> SERVICES
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 py-12">
-{services.map((service) => (
-
-
-
-
-      <article className="card">
-      <div className="thumb"></div>
-      <div className="infos bg-gradient-to-b from-yellowColor to-white">
-       
-        <h2 className="title">{service.name}</h2>
-        <div className='innerbox flex justify-center items-center gap-5'>
-          
-        
-        <h1 className='icon'>{service.icon}</h1>
-        <p className="txt">{service.description}</p>
-        </div>
-      </div>
-    </article>
-
-))}
-
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-0 lg:px-0 pb-20 md:pb-auto lg:pb-auto">
+        {services.map((service) => (
+          <div key={service.id} className="service-card rounded-lg  shadow-lg">
+            <div className="service-icon text-4xl text-yellowColor">{service.icon}</div>
+            <h2 className="service-title text-2xl font-semibold text-white mb-4">{service.name}</h2>
+            <p className="service-description text-gray-100">{service.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
