@@ -1,6 +1,7 @@
 import React from 'react';
 import './Services.css';
 import { FaLaptopCode, FaCode, FaServer, FaDatabase, FaCloud, FaMobileAlt } from 'react-icons/fa';
+import Sidebar from './Sidebar';
 
 const Services = () => {
   const services = [
@@ -13,6 +14,8 @@ const Services = () => {
   ];
 
   return (
+    <>
+    <Sidebar />
     <section className='bg-customColor min-h-screen text-white px-4 sm:px-8 md:px-[8rem] lg:px-[13rem]'>
       <div className='py-[6rem] text-center'>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}>
@@ -29,6 +32,7 @@ const Services = () => {
         ))}
       </div>
     </section>
+  </>
   );
 };
 

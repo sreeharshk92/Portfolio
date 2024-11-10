@@ -2,6 +2,7 @@ import React, { useState, useRef  } from 'react'
 import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTelegram,FaLinkedin, FaGithub, FaWhatsapp} from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import Sidebar from './Sidebar';
 export const Contact = () => {
   const [sendMessage,setSendMessage] = useState('');
   const form = useRef();
@@ -23,6 +24,8 @@ export const Contact = () => {
       );
   };
   return (
+    <>
+    <Sidebar />
   
 <section id="contact" className="lg:py-24 md:py-16 py-14 min-h-screen bg-customColor text-white text-center">
       <div className='px-4 md:px-16 items-center'>
@@ -62,6 +65,7 @@ export const Contact = () => {
         </div>
       </div>
     </section>
+  </>
 
   )
 }

@@ -1,0 +1,10 @@
+
+
+.main h1{
+    font-family:  "Montserrat", sans-serif;
+    font-weight: 900;
+}
+.main P, button{
+    font-family:  "Montserrat", sans-serif;
+    font-weight: 400;
+}

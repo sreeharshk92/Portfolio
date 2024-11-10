@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import mypic from './mypic.jpg';
 import './Home.css';
+import Sidebar from './Sidebar';
 
 const Home = () => {
   const phrases = [
@@ -33,6 +34,9 @@ const Home = () => {
   },);
 
   return (
+    <>
+    <Sidebar/>
+    
     <section className="min-h-screen bg-customColor flex items-center">
       <div
         className="yellowbox absolute left-0 top-0 w-1/2 h-full lg:bg-yellowColor md:bg-yellowColor z-0"
@@ -50,9 +54,11 @@ const Home = () => {
             className="text-3xl lg:text-[2.7rem] font-bold mb-4 random-word uppercase tracking-wider ">{currentWord}
           </h1>
           <p className="text-lg mt-4 leading-[1.9rem]">I'm a passionate Full Stack Developer, focused on crafting clean and user-friendly experiences. I am dedicated to building excellent software that improves the lives of those around me.</p>
+          
         </div>
       </div>
     </section>
+    </>
   );
 };
 

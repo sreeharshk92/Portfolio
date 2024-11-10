@@ -4,6 +4,7 @@ import { FaDownload } from 'react-icons/fa';
 import { FaGraduationCap } from "react-icons/fa";
 import { FaSchool } from "react-icons/fa";
 import { FaBriefcase } from 'react-icons/fa';
+import Sidebar from './Sidebar';
 
 const About = () => {
 
@@ -18,6 +19,9 @@ const About = () => {
   ];
 
   return (
+    <>
+    <Sidebar />
+   
     <section id="about" className="py-[6rem] bg-customColor  text-white">
        <div className='lg:px-96 md:px-32 px-10 flex flex-col justify-center'>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-24" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}>
@@ -164,6 +168,7 @@ const About = () => {
         </main>
       </section>
     </section>
+    </>
   );
 };
 

@@ -12,6 +12,9 @@ module.exports = {
       screens:{
         sml:'440px',
       },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
 
       
     },
