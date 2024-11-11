@@ -42,9 +42,13 @@ const About = () => {
             <p className="mb-4"><span className=" text-slate-400">Freelance : </span>Available</p>
           </div>
         </div>
-        <button className='flex items-center justify-center border border-yellowColor rounded-3xl py-3 w-[15rem] md:w-[13rem]  mt-8 mb-10 hover:bg-yellowColor hover:transition duration-500 ease-linear'>
-          DOWNLOAD CV <FaDownload className='ml-5' />
+        <a href="/resume.pdf" download="Sreeharsh_k_resume.pdf">
+
+       
+        <button className='text-sm flex items-center pl-7 font-medium border border-yellowColor rounded-3xl justify-between  w-[15rem] md:w-[13rem]  mt-8 mb-10 hover:bg-yellowColor hover:transition duration-200 ease-in-out'>
+          DOWNLOAD CV <FaDownload className=' bg-yellowColor text-[2.3rem] rounded-full p-2' />
         </button>
+        </a>
       </div>
 
       <hr className="mx-auto md:w-[50%] lg:w-[30rem]  w-[18rem] border-slate-700 mb-14" />

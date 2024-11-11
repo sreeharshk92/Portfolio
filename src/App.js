@@ -7,6 +7,7 @@ import Portfolio from "./Components/Portfolio";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
 import WorkingOnIt from "./Components/WorkingOnIt";
+import NotFound from "./Components/NotFound";
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/workingonit" element={<WorkingOnIt />}></Route>
         <Route path="/sidebar" element={<Sidebar />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Router>
 

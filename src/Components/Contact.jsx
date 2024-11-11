@@ -3,6 +3,8 @@ import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTelegram,FaLinkedin, Fa
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import Sidebar from './Sidebar';
+import { IoIosSend } from "react-icons/io";
+
 export const Contact = () => {
   const [sendMessage,setSendMessage] = useState('');
   const form = useRef();
@@ -57,9 +59,9 @@ export const Contact = () => {
               <textarea name="message" className="largeInput" rows="8" placeholder="YOUR MESSAGE"></textarea>
               {sendMessage && <p className='text-yellow-300 font-thin'>{sendMessage}</p>}
             </div>
-            <button type='submit' className='border border-[#ffb400] rounded-3xl py-3 px-14 mt-4 hover:bg-[#ffb400] hover:transition duration-500 ease-linear'>
-              SEND
-            </button>
+            <button type='submit' className='text-sm  font-bold flex items-center pl-8 border border-yellowColor rounded-3xl justify-between mt-8 mb-10 hover:bg-yellowColor hover:transition duration-500 ease-in-out'>
+          SEND <IoIosSend className='ml-5 bg-yellowColor text-[2.4rem] rounded-full p-2' />
+        </button> 
           </form>
 
         </div>
