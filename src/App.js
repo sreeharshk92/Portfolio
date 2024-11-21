@@ -23,7 +23,7 @@ function App() {
     <>
    
       <Router>
-       
+      
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -32,7 +32,7 @@ function App() {
         <Route path="/services" element={<Services />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/workingonit" element={<WorkingOnIt />}></Route>
-        <Route path="/sidebar" element={<Sidebar />}></Route>
+        <Route path="" element={<Sidebar />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Router>

@@ -29,7 +29,7 @@ export const Contact = () => {
     <>
     <Sidebar />
   
-<section id="contact" className="lg:py-24 md:py-16 py-14 min-h-screen bg-customColor text-white text-center">
+<section id="contact" className="lg:py-24 md:py-16 pt-14 pb-20 min-h-screen bg-customColor text-white text-center">
       <div className='px-4 md:px-16 items-center'>
         <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
           CONTACT <span className='text-yellowColor'>ME</span>
@@ -59,7 +59,7 @@ export const Contact = () => {
               <textarea name="message" className="largeInput" rows="8" placeholder="YOUR MESSAGE"></textarea>
               {sendMessage && <p className='text-yellow-300 font-thin'>{sendMessage}</p>}
             </div>
-            <button type='submit' className='text-sm  font-bold flex items-center pl-8 border border-yellowColor rounded-3xl justify-between mt-8 mb-10 hover:bg-yellowColor hover:transition duration-500 ease-in-out'>
+            <button type='submit' className='text-sm  font-bold flex items-center pl-8 border  border-yellowColor rounded-3xl justify-between mt-8 mb-10 hover:bg-yellowColor hover:transition duration-500 ease-in-out'>
           SEND <IoIosSend className='ml-5 bg-yellowColor text-[2.4rem] rounded-full p-2' />
         </button> 
           </form>
