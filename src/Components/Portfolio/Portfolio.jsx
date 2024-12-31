@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import { FaGithub, FaRegPlayCircle } from "react-icons/fa";
-import starbucksClone from './images/starbucks-clone-img.jpg';
-import website from './images/website-img.png';
-import tmdb from './images/tmdb.jpg';
-import spotifyClone from './images/spotifyClone.jpg';
-import Sidebar from './Sidebar';
+import starbucks from '../images/starbucks-clone-img.jpg';
+import website from '../images/website-img.png';
+import tmdb from '../images/tmdb.jpg';
+import spotify from '../images/spotifyClone.jpg'
+import Sidebar from '../SideBar/Sidebar';
+import Loader from '../Loader/Loader';
 
 const projects = [
   {
@@ -20,8 +21,8 @@ const projects = [
   },
   {
     id: 1,
-    title: "Starbucks Clone",
-    image: starbucksClone,
+    title: "Starbucks Static Website",
+    image: starbucks,
     type: "Static Website",
     techStack: "HTML | CSS",
     description: "This project showcases a fully responsive clone of the Starbucks website, developed using HTML and CSS. It features a user-friendly layout with navigation, product displays, and an interactive design that mimics the original site's aesthetic, allowing users to experience a familiar browsing environment.",
@@ -40,8 +41,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Spotify Clone",
-    image: spotifyClone,
+    title: "Spotify Web Application",
+    image: spotify,
     type: "Dynamic Website",
     techStack: "React",
     description: "The project developed using React. It is a multiple webpage web application that mimics the core functionalities and design of the original Spotify interface. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
@@ -51,13 +52,22 @@ const projects = [
 ];
 
 const Portfolio = () => {
+
+  const [isLoading, setIsLoading] = useState(true)
   const [expandedProject, setExpandedProject] = useState(null);
 
   const toggleCard = (index) => {
     setExpandedProject(index === expandedProject ? null : index);
   };
 
-  return (
+   useEffect(() => {
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(loadingTimer);
+    }, [])
+
+  return isLoading ? ( <Loader /> ) : (
     <>
     <Sidebar />
    

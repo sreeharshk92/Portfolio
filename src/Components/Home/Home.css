@@ -1,5 +1,9 @@
 
-@media (min-width :1022px) and (max-width :1496px) {
+
+
+
+
+@media (min-width :1023px) and (max-width :1496px) {
     .image{
         height: 28rem;
     }
@@ -15,12 +19,22 @@
      }
 
      .textbox h1{
-        font-size: 36px;
+        font-size: 37px;
+     }
 
+     .heading{
+      font-size: 2.2rem;
      }
 
     
 
+}
+
+
+@media (min-width :344px) and (max-width :422px) {
+  .heading{
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width :1022px){

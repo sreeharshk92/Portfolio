@@ -5,12 +5,7 @@
   color: white;
 }
 
-/* .nav-item-sm{
-  transition: all 0.5s ease;
-  width: 6rem;
-  overflow: hidden;
-  color: white;
-} */
+
 
 .nav-item:hover{
   background-color: #ffb400;
@@ -25,16 +20,11 @@
   font-size: small;
  }
 
-/* .nav-text-sm {
-  display: inline-block;
-  transition: opacity 0.5s ease;
-  font-weight: 900;
-  font-size: small;
-  color: white;
- } */
 
 .nav-item:hover .nav-text {
   display: inline-block;
   
 }
+
+
 

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import './Services.css';
 import { FaLaptopCode, FaCode, FaServer, FaDatabase, FaCloud, FaMobileAlt } from 'react-icons/fa';
-import Sidebar from './Sidebar';
+import Sidebar from '../SideBar/Sidebar';
+import Loader from '../Loader/Loader';
 
 const Services = () => {
+    const [isLoading, setIsLoading] = useState(true)
+  
   const services = [
     { id: 1, name: 'Full Stack Development', description: 'Development of robust and scalable web applications using Laravel for the backend and React.js for the frontend.', icon: <FaLaptopCode /> },
     { id: 2, name: 'Frontend Development', description: 'Creating responsive and interactive user interfaces with HTML, CSS, JavaScript, and React.js.', icon: <FaCode /> },
@@ -13,7 +17,14 @@ const Services = () => {
     { id: 7, name: 'Responsive Web Design', description: 'Ensuring websites are fully responsive and work seamlessly across all devices and screen sizes.', icon: <FaMobileAlt /> },
   ];
 
-  return (
+   useEffect(() => {
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(loadingTimer);
+    }, [])
+
+  return isLoading ? ( <Loader /> ) : (
     <>
     <Sidebar />
     <section className='bg-customColor min-h-screen text-white px-4 sm:px-8 md:px-[8rem] lg:px-[13rem]'>
