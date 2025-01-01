@@ -9,15 +9,6 @@ const About = () => {
 
   const [isLoading, setIsLoading] = useState(true)
 
-  // const skills = [
-  //   { name: 'HTML', percentage: 90, },
-  //   { name: 'CSS', percentage: 85 },
-  //   { name: 'JavaScript', percentage: 75 },
-  //   { name: 'React', percentage: 80 },
-  //   { name: 'MySQL', percentage: 70 },
-  //   { name: 'PHP', percentage: 85 },
-  //   { name: 'Laravel', percentage: 80 },
-  // ];
 
   useEffect(() => {
   const loadingTimer = setTimeout(() => {

@@ -87,15 +87,21 @@ const Skill = () => {
           <BiSolidLeftArrow />
         </button>
 
-        <div ref={scrollRef} className="py-3  flex overflow-x-auto hide-scrollbar" style={{ scrollBehavior: "smooth" }}onScroll={checkScroll}>
-          {skills.map((skill) => (
-          
-            <div key={skill.id} className="flex justify-center flex-shrink-0 w-[25%]  ">
-              <img className="object-cover hover:-translate-y-2.5 transition duration-500 ease-in-out lg:h-[10rem] lg:w-[10rem] h-16 w-16" src={skill.imgpath} alt="skills-png" />
-            </div>
-          
-          ))}
-        </div>
+        <div ref={scrollRef} className="py-5 flex overflow-x-auto hide-scrollbar" style={{ scrollBehavior: "smooth" }} onScroll={checkScroll}>
+  {skills.map((skill) => (
+    <div key={skill.id} className="flex justify-center flex-shrink-0 w-[25%] relative group">
+      <img
+        className="object-cover hover:-translate-y-2.5 transition duration-500 ease-in-out lg:h-[10rem] lg:w-[10rem] h-16 w-16"
+        src={skill.imgpath}
+        alt={skill.name}
+      />
+      <span className="absolute left-1/2 transform -translate-x-1/2 top-full  text-slate-400 bg-black px-2 text-sm rounded opacity-0 group-hover:opacity-100 transition duration-300" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight:900 }}>
+        {skill.name}
+      </span>
+    </div>
+  ))}
+</div>
+
 
         <button
           className="text-white hover:text-yellowColor"
