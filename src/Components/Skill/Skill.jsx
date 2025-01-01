@@ -72,7 +72,7 @@ const Skill = () => {
   return (
     <main className="  flex justify-center bg-customColor ">
 
-    <section className=" md:w-[30rem] w-[28rem] lg:w-[58rem] py-5">
+    <section className=" md:w-[36rem] w-[18rem] lg:w-[58rem] py-5">
       <div className="relative w-full">
         <button
           className="absolute left-0 top-[50%] z-10 text-white hover:text-yellowColor"
@@ -89,9 +89,9 @@ const Skill = () => {
 
         <div ref={scrollRef} className="py-5 flex overflow-x-auto hide-scrollbar" style={{ scrollBehavior: "smooth" }} onScroll={checkScroll}>
   {skills.map((skill) => (
-    <div key={skill.id} className="flex justify-center flex-shrink-0 w-[25%] relative group">
+    <div key={skill.id} className="flex justify-center flex-shrink-0 lg:w-[25%] md:w-[25%] w-[50%] relative group">
       <img
-        className="object-cover hover:-translate-y-2.5 transition duration-500 ease-in-out lg:h-[10rem] lg:w-[10rem] h-16 w-16"
+        className="object-cover hover:-translate-y-2.5 transition duration-500 ease-in-out lg:h-[10rem] lg:w-[10rem] h-24 w-24"
         src={skill.imgpath}
         alt={skill.name}
       />

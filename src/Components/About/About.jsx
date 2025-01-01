@@ -94,7 +94,7 @@ const About = () => {
                 <div className='yellowCircle'>
                   <FaGraduationCap />
                 </div>
-                <div className="h-[7rem] border-l-[0.1rem] border-gray-400"></div>
+                <div className="lg:h-[6rem] md:h-[6rem] h-[9rem] border-l-[0.1rem] border-gray-400"></div>
               </section>
 
               <section className='flex flex-col py-2 w-[25rem] gap-4'>
@@ -105,7 +105,7 @@ const About = () => {
                 </div>
 
                 <h1 className='text-start text-lg '>BACHELOR DEGREE <span>- KANNUR UNIVERSITY</span></h1>
-                <p className='text-start'>Lorem ipsum dolor sit amet consectetur adipisicing dgdfgfdgdfgdfffdg</p>
+                <p className='text-start'>Pursuing a Bachelor of Degree at Kannur University </p>
               </section>
 
             </div>
@@ -116,7 +116,7 @@ const About = () => {
                 <div className='yellowCircle'>
                   <FaSchool />
                 </div>
-                <div className=" border-l-[0.1rem] border-gray-400 h-[7rem]"></div>
+                <div className=" border-l-[0.1rem] border-gray-400 lg:h-[9rem] md:h-[9rem] h-[13rem]"></div>
               </section>
 
               <section className='flex flex-col py-2 w-[25rem] gap-4'>
@@ -127,7 +127,7 @@ const About = () => {
                 </div>
 
                 <h1 className='text-start text-lg'>HIGHER SECONDARY <span>- GOVT HSS MEENKUNNU</span></h1>
-                <p className='text-start'>Lorem ipsum dolor sit amet consectetur adipisicing dgdfgfdgdfgdfffdg</p>
+                <p className='text-start'>Completed Higher Secondary education at GOVT HSS, Meenkunnu, with a focus on Commerce and Computer Applications.</p>
               </section>
 
             </div>
@@ -136,7 +136,7 @@ const About = () => {
 
               <section className='flex flex-col items-center '>
                 <div className='yellowCircle'><FaSchool /></div>
-                <div className="border-l-[0.1rem] border-gray-400 h-[7rem]"></div>
+                <div className="border-l-[0.1rem] border-gray-400 lg:h-[8rem] md:h-[8rem] h-[10rem]"></div>
               </section>
 
               <section className='flex flex-col py-2 w-[25rem] gap-4'>
@@ -147,7 +147,7 @@ const About = () => {
                 </div>
 
                 <h1 className='text-start text-lg'>SSLC <span>- AHSS AZHIKODE</span></h1>
-                <p className='text-start'>Lorem ipsum dolor sit amet consectetur adipisicing dgdfgfdgdfgdfffdg</p>
+                <p className='text-start'>Completed SSLC at AHSS Azhikode, where I developed a strong academic foundation.</p>
               </section>
 
             </div>
@@ -160,7 +160,7 @@ const About = () => {
 
               <section className='flex flex-col items-center '>
                 <div className='yellowCircle '><FaBriefcase /></div>
-                <div className="border-l-[0.1rem] border-gray-400 h-[7rem]"></div>
+                <div className="border-l-[0.1rem] border-gray-400 lg:h-[10rem] md:h-[10rem] h-[23rem]"></div>
               </section>
 
               <section className='flex flex-col py-2 w-[29rem] gap-4'>
@@ -171,7 +171,7 @@ const About = () => {
                 </div>
 
                 <h1 className='text-start text-lg'>INTERN <span>- EDUZELL TECHNOLOGIES & SOLUTIONS L L P</span></h1>
-                <p className='text-start'>Lorem ipsum dolor sit amet consectetur adipisicing dgdfgfdgdfgdfffdg</p>
+                <p className='text-start'>Currently working as an Intern at Eduzell Technologies & Solutions LLP, where I am gaining hands-on experience in web development, focusing on building responsive and dynamic applications using technologies like Laravel, React.js, and MySQL.</p>
               </section>
 
             </div>
