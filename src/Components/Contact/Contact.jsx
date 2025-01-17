@@ -3,13 +3,13 @@ import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTelegram, FaLinkedin, F
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import { IoIosSend } from "react-icons/io";
-import Loader from '../Loader/Loader';
 import Sidebar from '../SideBar/Sidebar';
+import PageLoad from '../Loader/PageLoad';
 
 export const Contact = () => {
   const form = useRef();
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false)
 
@@ -18,7 +18,7 @@ export const Contact = () => {
 
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
+      setLoading(false);
     }, 2000);
 
     return () => clearTimeout(loadingTimer);
@@ -45,7 +45,7 @@ export const Contact = () => {
   };
 
 
-  return isLoading ? (<Loader />) : (
+  return loading ? (<PageLoad />) : (
     <>
       <Sidebar />
 

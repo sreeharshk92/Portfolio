@@ -8,7 +8,8 @@ import Services from "./Components/Services/Services";
 import Contact from "./Components/Contact/Contact";
 import WorkingOnIt from "./Components/WorkingOnIt/WorkingOnIt";
 import NotFound from "./Components/NotFound/NotFound";
-import Skill from "./Components/Skill/Skill";
+import Skill from "./Components/About/Skill/Skill";
+import PageLoad from "./Components/Loader/PageLoad";
 
 
 
@@ -33,9 +34,8 @@ function App() {
         <Route path="/services" element={<Services />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/workingonit" element={<WorkingOnIt />}></Route>
-        <Route path="/skill" element={<Skill />}></Route>
-        <Route path="" element={<Sidebar />}></Route>
         <Route path="*" element={<NotFound />}></Route>
+        <Route path="/pageload" element={<PageLoad />}></Route>
 
       </Routes>
     </Router>

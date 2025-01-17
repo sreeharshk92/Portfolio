@@ -29,7 +29,7 @@
   margin: 60px auto;
   border-radius: 14px;
   box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.2);
-  width: 360px;
+  width: 300px;
   background: #f9f9f9;
   position: relative;
 }
@@ -67,7 +67,7 @@ span.close::before {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  min-height: 270px;
+  min-height: 300px;
 }
 
 .graphic::after{
@@ -151,6 +151,7 @@ p.story {
   background-color: white; /* Ensure a background color */
   overflow-y: auto; /* Allow scrolling if the content is too large */
   transition: all 0.4s ease;
+  
 }
 
 .item.animatedItems span.close {

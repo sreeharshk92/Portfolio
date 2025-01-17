@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 import './Skill.css'
-import html from "../images/html.png";
-import css from "../images/css.png";
-import js from "../images/javascript.png";
-import tailwind from "../images/tailwind.png";
-import laravel from "../images/laravel.png";
-import php from "../images/php.png";
-import git from "../images/git.png";
-import github from "../images/github.png";
-import react from "../images/react.png";
-import aws from "../images/aws.png";
-import mysql from "../images/mysql.png";
-import firebase from "../images/firebase.png";
+import html from "../../images/html.png";
+import css from "../../images/css.png";
+import js from "../../images/javascript.png";
+import tailwind from "../../images/tailwind.png";
+import laravel from "../../images/laravel.png";
+import php from "../../images/php.png";
+import git from "../../images/git.png";
+import github from "../../images/github.png";
+import react from "../../images/react.png";
+import aws from "../../images/aws.png";
+import mysql from "../../images/mysql.png";
+import firebase from "../../images/firebase.png";
 
 
 const skills = [
@@ -70,7 +70,15 @@ const Skill = () => {
   };
 
   return (
+
+    <>
+    
+    <h3 className="lg:text-3xl md:text-2xl text-xl  px-10 text-center  font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '700' }}>MY SKILLS</h3>
+
+  
     <main className="  flex justify-center bg-customColor ">
+
+
 
     <section className=" md:w-[36rem] w-[18rem] lg:w-[58rem] py-5">
       <div className="relative w-full">
@@ -123,6 +131,7 @@ const Skill = () => {
       </div>
     </section>
     </main>
+    </>
   );
 };
 

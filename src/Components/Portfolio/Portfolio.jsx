@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import { FaGithub, FaRegPlayCircle } from "react-icons/fa";
-import starbucks from '../images/starbucks-clone-img.jpg';
+import starbucks from '../images/starbucks-site.png';
 import website from '../images/website-img.png';
-import tmdb from '../images/tmdb.jpg';
+import tmdb from '../images/tmdb-site.png';
 import spotify from '../images/spotifyClone.jpg'
 import Sidebar from '../SideBar/Sidebar';
-import Loader from '../Loader/Loader';
+import PageLoad from '../Loader/PageLoad';
 
 const projects = [
   {
@@ -48,12 +48,33 @@ const projects = [
     description: "The project developed using React. It is a multiple webpage web application that mimics the core functionalities and design of the original Spotify interface. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
     github: "https://github.com/sreeharshk92/Spotify-clone",
     live: "https://spotifycloneorg.netlify.app"
-  }
+  },
+  {
+    id: 4,
+    title: "PIXEL POSITIONS",
+    image: spotify,
+    type: "Full Stack Website",
+    techStack: "Laravel",
+    description: "The project developed using Laravel from stratch. It is Job seeking and applying web application. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
+    github: "https://github.com/sreeharshk92/Spotify-clone",
+    live: "https://spotifycloneorg.netlify.app"
+  },
+  {
+    id: 5,
+    title: "FORM VALIDATION",
+    image: spotify,
+    type: "Register Form",
+    techStack: "HTML | CSS | JavaScript",
+    description: "The project developed using Laravel from stratch. It is Job seeking and applying web application. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
+    github: "https://github.com/sreeharshk92/Spotify-clone",
+    live: "https://spotifycloneorg.netlify.app"
+  },
 ];
 
 const Portfolio = () => {
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
+
   const [expandedProject, setExpandedProject] = useState(null);
 
   const toggleCard = (index) => {
@@ -61,13 +82,15 @@ const Portfolio = () => {
   };
 
    useEffect(() => {
-    const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(loadingTimer);
-    }, [])
+       const timer = setTimeout(() => {
+         setLoading(false); // Stop loading after the animation completes
+       }, 1800); // Match this duration to your PageLoad animation (e.g., 2 seconds)
+   
+       return () => clearTimeout(timer); // Cleanup timeout on component unmount
+     }, []);
+   
 
-  return isLoading ? ( <Loader /> ) : (
+  return loading ? (<PageLoad />) :  (
     <>
     <Sidebar />
    
@@ -82,7 +105,7 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`item ${expandedProject === index ? 'animatedItems lg:!w-[47%] md:!w-[80%] !w-[97%]' : ''}`}
+              className={`item ${expandedProject === index ? 'animatedItems  lg:!w-[47%] md:!w-[80%] !w-[97%]' : ''}`}
               onClick={() => toggleCard(index)}
             >
               <span className="close" onClick={(e) => { e.stopPropagation(); toggleCard(null); }}></span>

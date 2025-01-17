@@ -1,0 +1,25 @@
+.education-container span, .education-container p{
+    color: #CFCFCF;
+    
+}
+
+.year{
+    text-align: center;
+    font-weight: 500;
+    font-size: small;
+}
+
+.education-container h1{
+    font-weight:500;
+}
+
+.yellowCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #FFB400;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+}

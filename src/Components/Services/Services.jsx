@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
 import './Services.css';
 import { FaLaptopCode, FaCode, FaServer, FaDatabase, FaCloud, FaMobileAlt } from 'react-icons/fa';
 import Sidebar from '../SideBar/Sidebar';
-import Loader from '../Loader/Loader';
+import PageLoad from '../Loader/PageLoad';
 
 const Services = () => {
-    const [isLoading, setIsLoading] = useState(true)
-  
+  const [loading, setLoading] = useState(true); // State to handle loading
+
   const services = [
     { id: 1, name: 'Full Stack Development', description: 'Development of robust and scalable web applications using Laravel for the backend and React.js for the frontend.', icon: <FaLaptopCode /> },
     { id: 2, name: 'Frontend Development', description: 'Creating responsive and interactive user interfaces with HTML, CSS, JavaScript, and React.js.', icon: <FaCode /> },
@@ -17,33 +16,38 @@ const Services = () => {
     { id: 7, name: 'Responsive Web Design', description: 'Ensuring websites are fully responsive and work seamlessly across all devices and screen sizes.', icon: <FaMobileAlt /> },
   ];
 
-   useEffect(() => {
-    const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(loadingTimer);
-    }, [])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Stop loading after the animation completes
+    }, 1800); // Match this duration to your PageLoad animation (e.g., 2 seconds)
 
-  return isLoading ? ( <Loader /> ) : (
+    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+  }, []);
+
+
+  return loading ? (<PageLoad />) : (
     <>
-    <Sidebar />
-    <section className='bg-customColor min-h-screen text-white px-4 sm:px-8 md:px-[8rem] lg:px-[13rem]'>
-      <div className='py-[6rem] text-center'>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}>
-          <span className='text-yellowColor'>MY</span> SERVICES
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-0 lg:px-0 pb-20 md:pb-auto lg:pb-auto">
-        {services.map((service) => (
-          <div key={service.id} className="service-card rounded-lg  shadow-lg">
-            <div className="service-icon text-4xl text-yellowColor">{service.icon}</div>
-            <h2 className="service-title text-2xl font-semibold text-white mb-4">{service.name}</h2>
-            <p className="service-description text-gray-100">{service.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  </>
+      <Sidebar />
+      <section className='bg-customColor min-h-screen text-white px-4 sm:px-8 md:px-[8rem] lg:px-[13rem]'>
+        <div className='py-[6rem] text-center'>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
+            style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}
+          >
+            <span className='text-yellowColor'>MY</span> SERVICES
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-0 lg:px-0 pb-20 md:pb-auto lg:pb-auto">
+          {services.map((service) => (
+            <div key={service.id} className="service-card rounded-lg  shadow-lg">
+              <div className="service-icon text-4xl text-yellowColor">{service.icon}</div>
+              <h2 className="service-title text-2xl font-semibold text-white mb-4">{service.name}</h2>
+              <p className="service-description text-gray-100">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

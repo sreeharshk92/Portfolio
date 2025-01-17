@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, delay } from "framer-motion";
 import mypic from "../images/mypic.jpg";
 import "./Home.css";
 import Sidebar from "../SideBar/Sidebar";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import PageLoad from "../Loader/PageLoad";
 
 const texts = [
   "Full Stack Developer",
@@ -47,17 +48,24 @@ const Home = () => {
     },
   };
 
+  const clipPathVarient = {
+    hidden:{ opacity:0},
+    visible: { opacity: 1,
+      transition:{ delay:3.5, duration:2},
+     },
+  }
+
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 1, x:-800 },
     visible: {
       opacity: 1,
-      scale: 1,
-      transition: { duration: 1.5, ease: "easeOut" },
+      x:0,
+      transition: { duration: 2, ease: "easeOut", delay: 2, type:"spring", stiffness:7 },
     },
   };
 
   const textVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
@@ -65,13 +73,13 @@ const Home = () => {
     },
   };
 
-  return (
+  return isLoading ? (<PageLoad />) : (
     <>
       <Sidebar />
       <AnimatePresence>
         {isLoading ? (
           <motion.div
-            className="flex justify-center items-center h-screen bg-customColor"
+className="flex justify-center items-center h-screen bg-customColor"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -96,12 +104,15 @@ const Home = () => {
             initial="hidden"
             animate="visible"
           >
-            <div
+            <motion.div
+            variants={clipPathVarient}
+            initial="hidden"
+            animate="visible"
               className="yellowbox absolute left-0 top-0 w-1/2 h-full lg:bg-yellowColor md:bg-yellowColor z-0"
               style={{
                 clipPath: "polygon(0 0, 23% 0, 55% 100%, 0% 100%)",
               }}
-            ></div>
+            ></motion.div>
 
             <motion.div
               className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-10 px-6 lg:p-12 z-10"
@@ -161,7 +172,8 @@ const Home = () => {
                   <Link to="/about">
                     <button
                       type="submit"
-                      className="text-sm font-bold flex items-center pl-8 border border-yellowColor rounded-3xl justify-between mt-8 lg:mb-10 md:mb-auto mb-[3rem] hover:bg-yellowColor hover:transition duration-500 ease-in-out"
+                      className="text-sm font-bold flex items-center pl-8 border border-yellowColor rounded-3xl justify-between mt-8 lg:mb-10 md:mb-auto mb-[3rem] 
+                      hover:bg-yellowColor hover:transition duration-500 ease-in-out"
                     >
                       MORE ABOUT ME
                       <FaArrowRight className="ml-5 bg-yellowColor text-[3rem] rounded-full p-[.8rem]" />

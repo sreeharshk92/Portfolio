@@ -1,8 +1,5 @@
 
 
-
-
-
 @media (min-width :1023px) and (max-width :1496px) {
     .image{
         height: 28rem;
@@ -73,4 +70,6 @@
     opacity: 100;
   }
 }
+
+
 

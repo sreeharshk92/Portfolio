@@ -1,0 +1,77 @@
+.mainpage {
+    margin: 0;
+   background-color: yellow;
+    /* Prevents scrolling */
+    height: 100vh;    /* Ensures bjody height matches viewport */
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+    position: absolute; /* Positions all divs on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.one {
+    z-index: -1;
+    background-color: yellow;
+    animation: yellowload .8s ease-in-out 0s ; /* Start immediately */
+}
+
+.two {
+    z-index: 5;
+    background-color: rgb(52, 46, 43);
+    animation: blackload .8s ease-in-out .4s; /* Start .5 after yellow */
+}
+
+.three {
+    z-index: 10;
+    background-color: yellow;
+    animation: yellowload .8s ease-in-out .8s; /* Start 2s after first yellow */
+}
+
+.four {
+    z-index: 50;
+    background-color: rgb(52, 46, 43);
+    animation: blackload .8s ease-in-out 1.2s; /* Start 3s after first yellow */
+}
+
+.five {
+    z-index: 100;
+    background-color: yellow;
+    animation: yellowload .8s ease-in-out 1.4s; /* Start 3s after first yellow */
+}
+
+
+@keyframes yellowload {
+    from {
+        height: 0;
+        width: 100%;
+    }
+    to {
+        height: 100vh;
+        width: 100%;
+    }  
+}
+
+@keyframes blackload {
+0% {
+        height: 0;
+        width: 100%;
+    }
+50% {
+        height: 100vh;
+        width: 100%;
+    }  
+100% {
+    position: absolute;
+    bottom: 0;
+        height: 100vh;
+        width: 100%;
+    }  
+}
+

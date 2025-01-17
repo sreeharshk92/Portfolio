@@ -1,27 +1,19 @@
-.education-container span{
-    color: #CFCFCF;
-}
-.education-container p{
-    color: #CFCFCF;
+
+
+hr{
+animation:expand 1.5s linear 2s ;
 }
 
-.year{
-    text-align: center;
-    font-weight: 500;
-    font-size: small;
-}
+@keyframes expand {
+    from{
+        opacity: 0;
+        width:0;
+    }
 
-.education-container h1{
-    font-weight:500;
-}
+    to{
+        opacity: 1;
+width: 480px;
+    }
 
-.yellowCircle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: #FFB400;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 5rem;
+
 }
