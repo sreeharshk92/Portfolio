@@ -6,6 +6,7 @@ import Skill from './Skill/Skill';
 import PageLoad from '../Loader/PageLoad';
 import { motion } from 'framer-motion';
 import EduAndExp from './Education&Experience/EduAndExp';
+import { headingVariant, letterVariant, contactVariant } from '../Animations/AnimationVarients';
 
 const About = () => {
 
@@ -34,46 +35,10 @@ const About = () => {
 
   
 
-  const personelInfoVarient = {
-    hidden: { opacity: 0, x:-50 },
-    visible: { opacity: 1,x:0, 
-      transition: {
-        duration:.7,
-        delay: 1.1,
-        staggerChildren: 3
-      }
-    }
-  }
-
 
 
  
   
-  const headingVariant = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1, // Stagger animation for each child by 0.1s
-      },
-    },
-  };
-  
-  const letterVariant = {
-    hidden: {
-      opacity: 0,
-      x: -10, 
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-      },
-    },
-  };
 
 
 
@@ -93,8 +58,7 @@ const About = () => {
       variants={headingVariant}
       initial="hidden"
       animate="visible"
-      className="text-[2.8rem] pt-24  md:text-5xl lg:text-6xl text-center font-bold"
-      style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}
+      className="text-[2.8rem] pt-24  md:text-5xl lg:text-6xl text-center font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}
     >
       {heading.split('').map((char, index) => (
         <motion.span
@@ -110,7 +74,7 @@ const About = () => {
 
      
        <motion.div
-       variants={personelInfoVarient}
+       variants={contactVariant}
        initial="hidden"
        animate="visible" 
        className='lg:w-[60rem] md:px-28 px-10 flex flex-col justify-center'>

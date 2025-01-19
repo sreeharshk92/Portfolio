@@ -4,9 +4,13 @@ import { FaGithub, FaRegPlayCircle } from "react-icons/fa";
 import starbucks from '../images/starbucks-site.png';
 import website from '../images/website-img.png';
 import tmdb from '../images/tmdb-site.png';
-import spotify from '../images/spotifyClone.jpg'
+import spotify from '../images/spotify.png'
+import pixelPositions from '../images/pixel-positions.png'
+import formValidation from '../images/form-validation.png'
 import Sidebar from '../SideBar/Sidebar';
 import PageLoad from '../Loader/PageLoad';
+import { headingVariant,letterVariant, cardVariant } from '../Animations/AnimationVarients';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -14,7 +18,7 @@ const projects = [
     title: "Purely Pro Care",
     image: website,
     type: "Full Stack Website",
-    techStack: "React | Laravel | MySQL",
+    techStack: "React | Laravel | MySQL | Tailwind",
     description: "This project showcases a fully responsive home service booking platform, Purely Pro Care, developed using React, Laravel, and MySQL. It features a user-friendly layout with seamless navigation, service listings, and an interactive booking system. The design mimics professional service platforms, providing users with an intuitive experience for browsing and booking various home services.",
     github: "https://github.com/sreeharshk92/Purely-Pro-Care-Frontend",
     live: "/workingonit"
@@ -25,7 +29,7 @@ const projects = [
     image: starbucks,
     type: "Static Website",
     techStack: "HTML | CSS",
-    description: "This project showcases a fully responsive clone of the Starbucks website, developed using HTML and CSS. It features a user-friendly layout with navigation, product displays, and an interactive design that mimics the original site's aesthetic, allowing users to experience a familiar browsing environment.",
+    description: "This project showcases a fully responsive Starbucks website, developed using HTML and CSS. It features a user-friendly layout with navigation, product displays, and an interactive design that mimics the original site's aesthetic, allowing users to experience a familiar browsing environment.",
     github: "https://github.com/sreeharshk92/Starbucks-clone",
     live: "https://astounding-youtiao-820a1a.netlify.app"
   },
@@ -44,30 +48,30 @@ const projects = [
     title: "Spotify Web Application",
     image: spotify,
     type: "Dynamic Website",
-    techStack: "React",
+    techStack: "React | Tailwind",
     description: "The project developed using React. It is a multiple webpage web application that mimics the core functionalities and design of the original Spotify interface. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
     github: "https://github.com/sreeharshk92/Spotify-clone",
     live: "https://spotifycloneorg.netlify.app"
   },
   {
     id: 4,
-    title: "PIXEL POSITIONS",
-    image: spotify,
+    title: "Pixel Positions",
+    image: pixelPositions,
     type: "Full Stack Website",
-    techStack: "Laravel",
-    description: "The project developed using Laravel from stratch. It is Job seeking and applying web application. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
-    github: "https://github.com/sreeharshk92/Spotify-clone",
-    live: "https://spotifycloneorg.netlify.app"
+    techStack: "Laravel | MySQL | Tailwind",
+    description: "Pixel Positions is a dynamic job-seeking web application developed using Laravel, Tailwind CSS, and MySQL. The platform offers a seamless experience for users to explore job opportunities, manage postings, and apply for positions.",
+    github: "https://github.com/sreeharshk92/pixel-positions",
+    live: "/workingonit"
   },
   {
     id: 5,
-    title: "FORM VALIDATION",
-    image: spotify,
+    title: "Form Validator",
+    image: formValidation,
     type: "Register Form",
     techStack: "HTML | CSS | JavaScript",
-    description: "The project developed using Laravel from stratch. It is Job seeking and applying web application. It features a dynamic homepage, a music library with playlists and albums, and user navigation across multiple pages such as artist profiles and song details.",
-    github: "https://github.com/sreeharshk92/Spotify-clone",
-    live: "https://spotifycloneorg.netlify.app"
+    description: "Form Validator is a lightweight and efficient web application built using HTML, CSS, and JavaScript. This project focuses on ensuring seamless and secure user registration through comprehensive form validation.",
+    github: "https://github.com/sreeharshk92/form-validator",
+    live: "https://sreeharshk92.github.io/form-validator/"
   },
 ];
 
@@ -88,6 +92,8 @@ const Portfolio = () => {
    
        return () => clearTimeout(timer); // Cleanup timeout on component unmount
      }, []);
+
+     const heading = "MY PORTFOLIO"
    
 
   return loading ? (<PageLoad />) :  (
@@ -95,13 +101,30 @@ const Portfolio = () => {
     <Sidebar />
    
     <section className="bg-customColor min-h-screen text-white">
-      <div className="py-[6rem] text-center items-center">
-        <h2 style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: '900' }} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-          <span className="text-yellowColor">MY</span> PORTFOLIO
-        </h2>
+      <div className="text-center items-center">
+      <motion.h2
+      variants={headingVariant}
+      initial="hidden"
+      animate="visible"
+      className="text-[2.8rem] pt-24  md:text-5xl lg:text-6xl text-center font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}
+    >
+      {heading.split('').map((char, index) => (
+        <motion.span
+          key={index}
+          variants={letterVariant}
+          className={char === 'M' || char === 'Y' ? 'text-yellowColor' : ''}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </motion.h2>
       </div>
       <section className="body">
-        <main className="wrapper grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-0 md:gap-x-5 lg:gap-x-5">
+        <motion.main
+        variants={cardVariant}
+        initial="hidden"
+        animate="visible"
+        className="wrapper grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-0 md:gap-x-5 lg:gap-x-5 ">
           {projects.map((project, index) => (
             <div
               key={project.id}
@@ -131,7 +154,7 @@ const Portfolio = () => {
               )}
             </div>
           ))}
-        </main>
+        </motion.main>
       </section>
     </section>
     </>

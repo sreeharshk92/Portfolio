@@ -3,6 +3,8 @@ import './Services.css';
 import { FaLaptopCode, FaCode, FaServer, FaDatabase, FaCloud, FaMobileAlt } from 'react-icons/fa';
 import Sidebar from '../SideBar/Sidebar';
 import PageLoad from '../Loader/PageLoad';
+import { headingVariant,letterVariant,cardVariant } from '../Animations/AnimationVarients';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const [loading, setLoading] = useState(true); // State to handle loading
@@ -24,20 +26,36 @@ const Services = () => {
     return () => clearTimeout(timer); // Cleanup timeout on component unmount
   }, []);
 
+  const heading = "MY SERVICES"
+
 
   return loading ? (<PageLoad />) : (
     <>
       <Sidebar />
-      <section className='bg-customColor min-h-screen text-white px-4 sm:px-8 md:px-[8rem] lg:px-[13rem]'>
-        <div className='py-[6rem] text-center'>
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
-            style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}
-          >
-            <span className='text-yellowColor'>MY</span> SERVICES
-          </h2>
+      <section className='bg-customColor min-h-screen text-white px-4 md:px-[8rem] lg:px-[13rem]'>
+        <div className=' text-center'>
+        <motion.h2
+      variants={headingVariant}
+      initial="hidden"
+      animate="visible"
+      className="text-[2.8rem] pt-24  md:text-5xl lg:text-6xl text-center font-bold" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }}
+    >
+      {heading.split('').map((char, index) => (
+        <motion.span
+          key={index}
+          variants={letterVariant}
+          className={char === 'M' || char === 'Y' ? 'text-yellowColor' : ''}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </motion.h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-0 lg:px-0 pb-20 md:pb-auto lg:pb-auto">
+        <motion.div
+        variants={cardVariant}
+                initial="hidden"
+                animate="visible"
+                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-0 lg:px-0 pb-24 md:pb-auto lg:pb-auto mt-24">
           {services.map((service) => (
             <div key={service.id} className="service-card rounded-lg  shadow-lg">
               <div className="service-icon text-4xl text-yellowColor">{service.icon}</div>
@@ -45,7 +63,7 @@ const Services = () => {
               <p className="service-description text-gray-100">{service.description}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
     </>
   );

@@ -5,8 +5,11 @@ import './Contact.css';
 import { IoIosSend } from "react-icons/io";
 import Sidebar from '../SideBar/Sidebar';
 import PageLoad from '../Loader/PageLoad';
+import { delay, motion } from 'framer-motion';
+import {headingVariant, letterVariant, contactInfoVariant, formVariant} from '../Animations/AnimationVarients';
 
-export const Contact = () => {
+
+ const Contact = () => {
   const form = useRef();
 
   const [loading, setLoading] = useState(true);
@@ -45,22 +48,43 @@ export const Contact = () => {
   };
 
 
+
+  const heading="CONTACT ME"
+
+
   return loading ? (<PageLoad />) : (
     <>
       <Sidebar />
 
       <section id="contact" className="lg:py-24 md:py-16 pt-14 pb-20 min-h-screen bg-customColor text-white text-center">
-        <div className='px-4 md:px-16 items-center'>
-          <h2 style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
-            CONTACT <span className='text-yellowColor'>ME</span>
-          </h2>
-          <div className="w-full lg:w-3/4  mx-auto grid grid-cols-1 lg:grid-cols-2  text-left lg:mt-24">
-            <div className='font-semibold lg:w-2/3'>
-              <h3 className="text-xl lg:text-2xl font-bold mb-6">GET IN TOUCH</h3>
-              <p className="mb-6">Feel free to reach out via email or phone. I'm available for freelance projects and collaborations.</p>
-              <p className="mb-4 flex items-center"><FaEnvelope className="mr-2" /> sreeharshk92@gmail.com</p>
-              <p className="mb-4 flex items-center"><FaPhone className="mr-2" /> +91 7025984377</p>
-              <div className="flex space-x-4 mt-6 text-xl">
+        <div className='items-center '>
+          <motion.h2
+          variants={headingVariant}
+          initial="hidden"
+          animate="visible"
+          style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '900' }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+           {heading.split('').map((char, index) => (
+                   <motion.span
+                     key={index}
+                     variants={letterVariant}
+                     className={char === 'M' || char === 'E' ? 'text-yellowColor' : ''}
+                   >
+                     {char}
+                   </motion.span>
+                 ))}
+          </motion.h2>
+          <div className="px-9 lg:px-0 md:px-0  lg:w-3/4 md:w-[36rem] mx-auto grid grid-cols-1 lg:grid-cols-2 mt-24  text-left lg:mt-24">
+
+            <motion.div 
+            variants={contactInfoVariant}
+            initial="hidden"
+            animate="visible"
+            className='font-semibold space-y-3 lg:w-2/3'>
+              <h3 className="text-xl lg:text-2xl font-bold">GET IN TOUCH</h3>
+              <p className="">Feel free to reach out via email or phone. I'm available for freelance projects and collaborations.</p>
+              <p className=" flex items-center"><FaEnvelope className="mr-2" /> sreeharshk92@gmail.com</p>
+              <p className=" flex items-center"><FaPhone className="mr-2" /> +91 7025984377</p>
+              <div className="flex space-x-4 text-xl">
                 <a href="https://www.facebook.com/sreeharsh.sreeharsh.923/"><FaFacebook className="hover:text-yellowColor transition duration-300" /></a>
                 <a href="https://www.instagram.com/___sreeharsh___"><FaInstagram className="hover:text-yellowColor transition duration-300" /></a>
                 <a href="https://wa.me/+917025984377" target="_blank" rel="noopener noreferrer"><FaWhatsapp className="hover:text-yellowColor transition duration-300" /></a>
@@ -68,9 +92,13 @@ export const Contact = () => {
                 <a href="https://www.linkedin.com/in/sreeharsh-k-4b2782285/"><FaLinkedin className="hover:text-yellowColor transition duration-300" /></a>
                 <a href="https://github.com/sreeharshk92"><FaGithub className="hover:text-yellowColor transition duration-300" /></a>
               </div>
-            </div>
+            </motion.div>
 
-            <form onSubmit={sendEmail} ref={form} className="space-y-6 lg:mt-0 md:mt-5 mt-5">
+            <motion.form 
+            variants={formVariant}
+            initial="hidden"
+            animate="visible"
+            onSubmit={sendEmail} ref={form} className="space-y-6 lg:mt-0 md:mt-5 mt-5">
               <div className='flex flex-col lg:flex-row gap-4'>
                 <input type="text" name="user_name" className="smallInput" placeholder="YOUR NAME" required />
                 <input type="email" name="user_email" className="smallInput" placeholder="YOUR EMAIL" required />
@@ -83,7 +111,7 @@ export const Contact = () => {
               <button type='submit' className="text-sm font-bold flex items-center pl-8 border border-yellowColor rounded-3xl justify-between mt-8 mb-10 hover:bg-yellowColor hover:transition duration-500 ease-in-out">Send
                 <IoIosSend className='ml-5 bg-yellowColor text-[2.4rem] rounded-full p-2' />
               </button>
-            </form>
+            </motion.form>
 
           </div>
         </div>
