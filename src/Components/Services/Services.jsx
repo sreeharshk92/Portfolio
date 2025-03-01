@@ -60,7 +60,7 @@ const Services = () => {
             <div key={service.id} className="service-card rounded-lg  shadow-lg">
               <div className="service-icon text-4xl text-yellowColor">{service.icon}</div>
               <h2 className="service-title text-2xl font-semibold text-white mb-4">{service.name}</h2>
-              <p className="service-description text-gray-100">{service.description}</p>
+              <p className="service-description text-gray-100" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '400' }}>{service.description}</p>
             </div>
           ))}
         </motion.div>

@@ -7,6 +7,7 @@ import tmdb from '../images/tmdb-site.png';
 import spotify from '../images/spotify.png'
 import pixelPositions from '../images/pixel-positions.png'
 import formValidation from '../images/form-validation.png'
+import wrc from '../images/wrc.png'
 import Sidebar from '../SideBar/Sidebar';
 import PageLoad from '../Loader/PageLoad';
 import { headingVariant,letterVariant, cardVariant } from '../Animations/AnimationVarients';
@@ -72,6 +73,16 @@ const projects = [
     description: "Form Validator is a lightweight and efficient web application built using HTML, CSS, and JavaScript. This project focuses on ensuring seamless and secure user registration through comprehensive form validation.",
     github: "https://github.com/sreeharshk92/form-validator",
     live: "https://sreeharshk92.github.io/form-validator/"
+  },
+  {
+    id: 6,
+    title: "World Rally Championship",
+    image: wrc,
+    type: "Static Website",
+    techStack: "React | Tailwind",
+    description: "World Rally Championship Website is a dynamic, immersive and fully responsive static web site built using React and Tailwindcss. This project showcases the adrenaline-fueled world of rally racing, featuring event schedules, champion profiles, and race highlights, delivering an engaging experience for motorsport enthusiasts.",
+    github: "https://github.com/sreeharshk92/world-rally-championship",
+    live: "https://wrc-opal.vercel.app/"
   },
 ];
 

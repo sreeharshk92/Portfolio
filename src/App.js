@@ -10,6 +10,7 @@ import WorkingOnIt from "./Components/WorkingOnIt/WorkingOnIt";
 import NotFound from "./Components/NotFound/NotFound";
 import Skill from "./Components/About/Skill/Skill";
 import PageLoad from "./Components/Loader/PageLoad";
+import Practice from "./Components/Practice";
 
 
 
@@ -36,7 +37,7 @@ function App() {
         <Route path="/workingonit" element={<WorkingOnIt />}></Route>
         <Route path="*" element={<NotFound />}></Route>
         <Route path="/pageload" element={<PageLoad />}></Route>
-
+        <Route path="/practice" element={<Practice />}></Route>
       </Routes>
     </Router>
 

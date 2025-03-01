@@ -162,7 +162,7 @@ className="flex justify-center items-center h-screen bg-customColor"
                     </motion.div>
                   )}
                 </AnimatePresence>
-                <p className="text-lg mt-4 leading-[1.9rem]">
+                <p className="text-lg mt-4 leading-[1.9rem]" style={{ fontFamily: 'Montserrat,sans-serif', fontWeight: '300' }}>
                   I'm a passionate Full Stack Developer, focused on crafting
                   clean and user-friendly experiences. I am dedicated to
                   building excellent software that improves the lives of those
